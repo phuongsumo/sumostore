@@ -1,0 +1,33 @@
+{
+  "files": {
+    "main.css": "/sumostore/static/css/main.4ae44157.chunk.css",
+    "main.js": "/sumostore/static/js/main.5eac0299.chunk.js",
+    "main.js.map": "/sumostore/static/js/main.5eac0299.chunk.js.map",
+    "runtime-main.js": "/sumostore/static/js/runtime-main.21a0a22c.js",
+    "runtime-main.js.map": "/sumostore/static/js/runtime-main.21a0a22c.js.map",
+    "static/css/2.4659568d.chunk.css": "/sumostore/static/css/2.4659568d.chunk.css",
+    "static/js/2.3eae09a9.chunk.js": "/sumostore/static/js/2.3eae09a9.chunk.js",
+    "static/js/2.3eae09a9.chunk.js.map": "/sumostore/static/js/2.3eae09a9.chunk.js.map",
+    "index.html": "/sumostore/index.html",
+    "static/css/2.4659568d.chunk.css.map": "/sumostore/static/css/2.4659568d.chunk.css.map",
+    "static/css/main.4ae44157.chunk.css.map": "/sumostore/static/css/main.4ae44157.chunk.css.map",
+    "static/js/2.3eae09a9.chunk.js.LICENSE.txt": "/sumostore/static/js/2.3eae09a9.chunk.js.LICENSE.txt",
+    "static/media/Audi.1b8e5369.png": "/sumostore/static/media/Audi.1b8e5369.png",
+    "static/media/Ferrari.57e37f1e.jpg": "/sumostore/static/media/Ferrari.57e37f1e.jpg",
+    "static/media/Lamborghini.aeb629cf.png": "/sumostore/static/media/Lamborghini.aeb629cf.png",
+    "static/media/Header.css": "/sumostore/static/media/header-bg-img.f6f537b3.jpg",
+    "static/media/honda.ab5ea43b.png": "/sumostore/static/media/honda.ab5ea43b.png",
+    "static/media/Favorites.css": "/sumostore/static/media/image1.8603d421.jpg",
+    "static/media/image2.e8e3b5d1.jpg": "/sumostore/static/media/image2.e8e3b5d1.jpg",
+    "static/media/image3.9ac0aa25.gif": "/sumostore/static/media/image3.9ac0aa25.gif",
+    "static/media/myLogo.2824a404.png": "/sumostore/static/media/myLogo.2824a404.png",
+    "static/media/AddVehicle.css": "/sumostore/static/media/trade.a63b61d8.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.21a0a22c.js",
+    "static/css/2.4659568d.chunk.css",
+    "static/js/2.3eae09a9.chunk.js",
+    "static/css/main.4ae44157.chunk.css",
+    "static/js/main.5eac0299.chunk.js"
+  ]
+}
