@@ -1,0 +1,11 @@
+export { default as Navbar } from "./Nav/Navbar";
+export { default as Header } from "./Header/Header";
+export { default as HomePage } from "./HomePage/HomePage";
+export { default as Login } from "./Login/Login";
+export { default as Register } from "./Register/Register";
+export { default as AddVehicle } from "./AddVehicle/AddVehicle";
+export { default as RenderData } from "./RenderData/RenderData";
+export { default as Terms } from "./Terms/Term";
+export { default as Profile } from "./Profile/Profile";
+export { default as Footer } from "./Footer/Footer";
+export { default as Favorites } from "./Favorites/Favorites";

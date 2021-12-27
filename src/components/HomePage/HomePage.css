@@ -1,0 +1,29 @@
+.slider__img {
+    height: 100vh;
+    object-fit: cover;
+}
+
+.slider__title,
+.slider__description {
+    text-shadow: 0 0 0.25rem var(--primary-black);
+}
+
+.slider__description {
+    word-spacing: 0.1rem;
+    font-size: 1rem;
+}
+
+.slider__link {
+    text-decoration: none;
+    border: 0.0625rem solid var(--primary-brown);
+    color: var(--primary-white);
+    background-color: var(--primary-black);
+    padding: 0.0625rem 0.125rem;
+}
+
+.slider__link:hover {
+    background-color: var(--primary-brown);
+    color: var(--primary-black);
+    text-shadow: initial;
+    font-weight: 600;
+}

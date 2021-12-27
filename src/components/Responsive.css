@@ -1,0 +1,39 @@
+/* Extra small devices (portrait phones, less than 576px) */
+@media (max-width: 35.99875rem) {
+    .header__info h1 {
+        font-size: 1.2rem;
+    }
+
+    .typed-text span{
+        font-size: 1rem;
+    }
+
+    .header__btn {
+        font-size: 0.8rem;
+    }
+
+    .slider__title {
+        font-size: 1.5rem;
+    }
+
+    .slider__description {
+        font-size: 0.6rem;
+    }
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 36rem) and (max-width: 47.99875rem) {
+
+    .header__info h1 {
+        font-size: 1.5rem;
+    }
+
+    .typed-text span{
+        font-size: 1rem;
+    }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 48rem) and (max-width: 61.9rem) {
+    
+}

@@ -1,0 +1,61 @@
+.add-vehicle {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+@media (min-width: 35.5rem) and (max-width: 51rem) {
+    .add-vehicle {
+        margin-top: 4.6rem;
+    }
+}
+
+.add-vehicle::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url(./trade.jpg);
+    background-size: cover;
+    background-position: center;
+    opacity: 0.7;
+    z-index: -1;
+}
+
+.add__container {
+    position: relative;
+    margin: 6rem 0 2rem;
+    background-color: rgba(163, 141, 101, 0.4);
+    max-width: 41.25rem;
+    border: 0.0625rem solid var(--primary-brown);
+    border-radius: 3%;
+    padding: 1rem;
+}
+
+.add__label {
+    font-weight: 600;
+    text-shadow: 0 0 0.0625rem var(--primary-white);
+}
+
+.add__btn {
+    width: 96%;
+    margin-left: 2%;
+    border: 0.0625rem solid var(--secondary-brown);
+    color: var(--primary-black);
+    background-color: var(--primary-brown);
+    box-shadow: none!important;
+}
+
+.add__btn:hover {
+    background-color: var(--secondary-brown);
+    border: 0.0625rem solid var(--primary-brown);
+}
+.add__btn:active,
+.add__btn:focus {
+    color: var(--primary-black);
+    border: 0.0625rem solid var(--primary-brown);
+    background-color: var(--primary-brown);
+}

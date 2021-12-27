@@ -1,0 +1,109 @@
+.login {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url(./image1.jpg) no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+@media (min-width: 35.5rem) and (max-width: 51rem) {
+    .login {
+        margin-top: 4.6rem;
+    }
+}
+
+.login::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, .65 );
+}
+
+.login__container {
+    z-index: 1;
+}
+
+.login__form {
+    width: 21rem;
+}
+
+@media (max-width: 35.99875rem) {
+    .login__form {
+        width: 19rem;
+    }
+}
+
+.login__title {
+    font-weight: 600;
+    font-size: 28px;
+    color: #fff;
+    line-height: 1.2;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.wrap-login__form {
+    background-color: var(--primary-white);
+    /* height: 20rem; */
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.login__form .form-group {
+    position: relative;
+    margin-top: 1rem;
+    border-bottom: 0.063rem solid var(--primary-brown);
+    padding: 1rem 0.5rem;
+    width: 90%;
+}
+
+.login__icon {
+    position: absolute;
+    left: 0;
+    bottom: 1.4rem;
+    color: #edce96;
+}
+
+.login__input {
+    border: none;
+    outline: none;
+    width: 100%;
+    font-size: 1rem;
+    padding-left: 1rem;
+}
+
+.form__btn {
+    /* font-family: Ubuntu-Bold; */
+    text-transform: uppercase;
+    font-weight: 600;
+    margin: 2rem 0;
+    border: none;
+    width: 6.25rem;
+    height: 3.125rem;
+    border-radius: 1rem;
+    background: #edce96;
+    transition: .3s;
+}
+.form__btn:hover {
+    background: #333;
+    color: var(--primary-white);
+}
+
+.form__subtitle {
+    margin-top: 2rem;
+    color: var(--primary-white);
+}
+
+.forgot-password{
+    margin: 1rem 0 0 1rem;
+    align-self: flex-start;
+}

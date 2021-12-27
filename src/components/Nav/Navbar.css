@@ -1,0 +1,168 @@
+.logo {
+    width: 3rem;
+}
+
+/* ***************   MENU LINK   ************** */
+.navbar {
+    position: fixed;
+    z-index: 9;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+.navbar-nav {
+    margin-left: auto;
+}
+
+nav .nav-link {
+    position: relative;
+    padding: 0 !important;
+    font-weight: 600;
+    letter-spacing: 0.0375rem;
+    display: flex;
+}
+
+.nav-link::after {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 0.0625rem;
+    width: 0;
+    background-color: var(--primary-white);
+    transition: 0.3s;
+    content: "";
+}
+
+.nav-link.active::after {
+    width: 100%;
+}
+
+.nav-item:hover .nav-link::after {
+    width: 100%;
+}
+
+nav ul li {
+    text-transform: uppercase;
+}
+
+.navbar-nav .nav-link {
+    margin: 0.75rem;
+    color: var(--primary-white) !important;
+}
+
+.nav-link p {
+    margin: 0;
+}
+
+.nav-item {
+    position: relative;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+
+.nav-icon__container {
+    display: flex;
+}
+
+.nav-icon {
+    display: flex;
+    color: var(--primary-white);
+    margin-left: 0.5rem;
+}
+
+.nav-subnav {
+    position: absolute;
+    padding: 1rem 0.5rem 0.5rem 0.5rem;
+    left: -30rem;
+    right: 0;
+    top: 100%;
+    list-style: none;
+    background: var(--primary-white);
+    max-height: 20rem;
+    overflow-y: scroll;
+    display: none;
+}
+
+.nav-item:hover > .nav-subnav {
+    display: block;
+}
+
+.fav__item {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    white-space: nowrap;
+    color: var(--primary-black);
+    margin-bottom: 1rem;
+    cursor: pointer;
+}
+
+.fav__item:hover {
+    background: #ccc;
+}
+
+.fav__index {
+    max-width: 1rem;
+}
+
+.fav__null {
+    margin: 1rem 2rem 0.5rem;
+    text-align: center;
+    text-transform: initial;
+}
+
+.fav__img {
+    height: 3rem;
+    object-fit: contain;
+}
+
+.fav__count {
+    position: absolute;
+    font-weight: bold;
+    top: 0;
+    right: 0rem;
+    background-color: var(--primary-brown);
+    color: var(--primary-white);
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    width: 1.3rem;
+    height: 1.3rem;
+    border-radius: 50%;
+}
+
+.fav-table__head th,
+.fav-table__body {
+    text-align: center;
+}
+
+.fav-table__body td {
+    text-transform: initial;
+    line-height: 3rem;
+    max-width: 7rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+@media (min-width: 35.5rem) and (max-width: 50.75rem) {
+    .navbar-nav > li > a {
+        font-size: 0.8rem;
+        margin: 0.5rem;
+    }
+}
+
+@media (max-width: 61.938rem) {
+    ::-webkit-scrollbar {
+        display: none;
+    }
+    .navbar {
+        max-height: 90vh;
+        overflow-y: scroll;
+    }
+    .hide-on-mobile {
+        display: none;
+    }
+}

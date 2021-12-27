@@ -1,0 +1,24 @@
+.sale-table__head th,
+.sale-table__body tr {
+    text-align: center;
+}
+
+.sale-table__head tr th {
+    min-width: 6.5rem;
+}
+
+.sale-table__body tr td{
+    max-width: 6.5rem;
+    line-height: 4rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.detail-btn {
+    cursor: pointer;
+}
+
+.detail-btn:hover {
+    background-color: #ccc;
+}

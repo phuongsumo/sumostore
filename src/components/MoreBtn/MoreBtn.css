@@ -1,0 +1,24 @@
+.more__btn {
+    width: 16rem;
+    height: 3rem;
+    margin-top: 1.563rem;
+    margin-bottom: 1.563rem;
+    font-weight: 600;
+    border-radius: 2rem;
+    border: none;
+    background: var(--primary-brown);
+    -webkit-appearance: none;
+}
+
+.more__btn:hover {
+    background: var(--secondary-brown);
+    color: var(--primary-white);
+    box-shadow: 0 0 0.125rem var(--primary-white);
+}
+
+.more__btn--load:hover {
+    cursor: unset;
+    background: var(--primary-brown);
+    box-shadow: none;
+    color: initial;
+}
