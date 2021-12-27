@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/sumostore/static/css/main.4ae44157.chunk.css",
-    "main.js": "/sumostore/static/js/main.5eac0299.chunk.js",
-    "main.js.map": "/sumostore/static/js/main.5eac0299.chunk.js.map",
+    "main.js": "/sumostore/static/js/main.ef5e47c3.chunk.js",
+    "main.js.map": "/sumostore/static/js/main.ef5e47c3.chunk.js.map",
     "runtime-main.js": "/sumostore/static/js/runtime-main.21a0a22c.js",
     "runtime-main.js.map": "/sumostore/static/js/runtime-main.21a0a22c.js.map",
     "static/css/2.4659568d.chunk.css": "/sumostore/static/css/2.4659568d.chunk.css",
@@ -28,6 +28,6 @@
     "static/css/2.4659568d.chunk.css",
     "static/js/2.3eae09a9.chunk.js",
     "static/css/main.4ae44157.chunk.css",
-    "static/js/main.5eac0299.chunk.js"
+    "static/js/main.ef5e47c3.chunk.js"
   ]
 }
