@@ -38,7 +38,7 @@ const Login = ({ index }) => {
         const check = users.find(user => ((user.username === data.username) && (user.password === data.password)))
         if (check) {
             login(check)
-            navigate("/sumostore/profile")
+            navigate("/profile")
         } else {
             setShow(true)
         }
@@ -51,7 +51,7 @@ const Login = ({ index }) => {
     return (
         <>
             {user && user.auth ? (
-                <Navigate to="/sumostore/profile" />
+                <Navigate to="/profile" />
             ) : (
                 <div className="login">
                     <div className="login__container">
@@ -81,11 +81,11 @@ const Login = ({ index }) => {
                                         />
                                     </div>
                                     {errors.password && <span className="text-danger">{errors.password.message}</span>}
-                                    <Link className="forgot-password" to="/sumostore">Quên mật khẩu?</Link>
+                                    <Link className="forgot-password" to="/">Quên mật khẩu?</Link>
                                     <button type="submit" className="form__btn">Đăng nhập</button>
                                 </div>
 
-                                <p className="form__subtitle">Bạn chưa có tài khoản? <Link to="/sumostore/register">Đăng ký</Link></p>
+                                <p className="form__subtitle">Bạn chưa có tài khoản? <Link to="/register">Đăng ký</Link></p>
                             </form>
                         </div>
                         <Modal show={show} onHide={handleClose}>

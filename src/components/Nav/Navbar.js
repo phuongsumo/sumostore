@@ -18,7 +18,7 @@ function Navbar() {
         <>
             <nav className="navbar navbar-expand-lg navbar-light bg-dark">
                 <div className="container">
-                    <Link className="navbar-brand" to="/sumostore"><img className="logo" src={logo} alt="Sumo shop" /></Link>
+                    <Link className="navbar-brand" to="/"><img className="logo" src={logo} alt="Sumo shop" /></Link>
                     <div className="navbar-toggler" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <FontAwesomeIcon icon={faBars} style={{
                             color: "#fff"
@@ -26,39 +26,39 @@ function Navbar() {
                     </div>
                     <div className="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul className="navbar-nav">
-                            <Link className="nav-item" to="/sumostore/homepage">
+                            <Link className="nav-item" to="/homepage">
                                 <li className="nav-link">home</li>
                             </Link>
-                            <Link className="nav-item" to="/sumostore/newcar">
+                            <Link className="nav-item" to="/newcar">
                                 <li className="nav-link">ô tô</li>
                             </Link>
-                            <Link className="nav-item" to="/sumostore/motorbikes">
+                            <Link className="nav-item" to="/motorbikes">
                                 <li className="nav-link">xe máy</li>
                             </Link>
-                            <Link className="nav-item" to="/sumostore/oldcars">
+                            <Link className="nav-item" to="/oldcars">
                                 <li className="nav-link">ô tô cũ</li>
                             </Link>
-                            <Link className="nav-item" to="/sumostore/oldmotors">
+                            <Link className="nav-item" to="/oldmotors">
                                 <li className="nav-link">xe máy cũ</li>
                             </Link>
-                            <Link className="nav-item" to="/sumostore/addvehicle">
+                            <Link className="nav-item" to="/addvehicle">
                                 <li className="nav-link">đăng bán xe</li>
                             </Link>
                             {user && user.auth ? (
-                                <Link to="/sumostore/profile" className="nav-item">
+                                <Link to="/profile" className="nav-item">
                                     <li className="nav-link">{user.name}</li>
                                 </Link>
-                            ) : <Link className="nav-item" to="/sumostore/login">
+                            ) : <Link className="nav-item" to="/login">
                                 <li className="nav-link">đăng nhập</li>
                             </Link>
                             }
                             {user && user.auth &&
                                 <>
-                                    <Link className="nav-item" to="/sumostore/favorites">
+                                    <Link className="nav-item" to="/favorites">
                                         <li className="nav-link">Yêu thích</li>
                                     </Link>
                                     <li className="nav-item hide-on-mobile">
-                                        <Link to="/sumostore/favorites" className="nav-icon__container">
+                                        <Link to="/favorites" className="nav-icon__container">
                                             <FontAwesomeIcon icon={faBookmark} className="nav-icon" />
                                             <FontAwesomeIcon
                                                 icon={faSortDown}
