@@ -153,9 +153,9 @@ const RenderData = ({ type, index }) => {
                                             <Card.Text className="vehicle__subtitle">Giá: {vehicle.price}</Card.Text>
                                             <Card.Text className="vehicle__subtitle">Nơi bán: {vehicle.address}</Card.Text>
                                         </div>
-                                        {user.username === 'admin' && <Button onClick={() => handleDelete(vehicle.id)}>Xóa</Button>}
+                                        {user && user.username === 'admin' && <Button onClick={() => handleDelete(vehicle.id)}>Xóa</Button>}
 
-                                        {user.auth && ((!favorites.some(favorite => favorite.name === vehicle.name && favorite.price === vehicle.price && favorite.image === vehicle.image)
+                                        {user && favorites && user.auth && ((!favorites.some(favorite => favorite.name === vehicle.name && favorite.price === vehicle.price && favorite.image === vehicle.image)
                                             &&
                                             <div className="fav-icon__container">
                                                 <FontAwesomeIcon

@@ -77,7 +77,7 @@ const AddVehicle = ({ index }) => {
     return (
         <div className="add-vehicle">
             <div className="container">
-                {user.auth ? (
+                {user && user.auth ? (
                     <div className="row justify-content-center">
                         <Form className="row add__container" onSubmit={handleSubmit(onSubmit)}>
                             <Form.Group className="mb-3 col-md-6" name="seller">

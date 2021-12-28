@@ -74,7 +74,7 @@ const Profile = ({ index }) => {
 
     return (
         <div className="profile">
-            {user.auth ? (
+            {user && user.auth ? (
                 <Container className="profile__container">
                     <Row className="h-100">
                         <Col

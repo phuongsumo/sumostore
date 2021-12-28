@@ -1,6 +1,6 @@
 import Axios from 'axios'
 import { useContext, useEffect, useState } from 'react'
-import { Link, useNavigate } from 'react-router-dom'
+import { Link, useNavigate, Navigate } from 'react-router-dom'
 import { useForm } from 'react-hook-form'
 import { UserContext } from "../UserContext/UserContext"
 import { Modal } from 'react-bootstrap'
@@ -10,7 +10,7 @@ import { faTimes, faUser, faKey } from "@fortawesome/free-solid-svg-icons"
 import "./Login.css"
 
 const Login = ({ index }) => {
-    const { login } = useContext(UserContext);
+    const { user, login } = useContext(UserContext);
     const [users, setUsers] = useState([]);
     const [show, setShow] = useState(false);
     const navigate = useNavigate();
@@ -49,57 +49,64 @@ const Login = ({ index }) => {
     }
 
     return (
-        <div className="login">
-            <div className="login__container">
-                <div className="container">
-                    <form className="login__form" onSubmit={handleSubmit(handleOnSubmit)}>
-                        <h1 className="login__title">Đăng nhập</h1>
-                        <div className="wrap-login__form">
-                            <div className="form-group">
-                                <FontAwesomeIcon icon={faUser} className="login__icon" />
-                                <input
-                                    autoComplete="off"
-                                    type="text"
-                                    className="login__input"
-                                    placeholder="Tài khoản"
-                                    {...register("username", { required: 'Vui lòng nhập tên tài khoản' })}
-                                />
-                            </div>
-                            {errors.username && <span className="text-danger">{errors.username.message}</span>}
-                            <div className="form-group">
-                                <FontAwesomeIcon icon={faKey} className="login__icon" />
-                                <input
-                                    type="password"
-                                    className="login__input"
-                                    name="password"
-                                    placeholder="Mật khẩu"
-                                    {...register("password", { required: 'Vui lòng nhập mật khẩu' })}
-                                />
-                            </div>
-                            {errors.password && <span className="text-danger">{errors.password.message}</span>}
-                            <Link className="forgot-password" to="/">Quên mật khẩu?</Link>
-                            <button type="submit" className="form__btn">Đăng nhập</button>
-                        </div>
+        <>
+            {user && user.auth ? (
+                <Navigate to="/profile" />
+            ) : (
+                <div className="login">
+                    <div className="login__container">
+                        <div className="container">
+                            <form className="login__form" onSubmit={handleSubmit(handleOnSubmit)}>
+                                <h1 className="login__title">Đăng nhập</h1>
+                                <div className="wrap-login__form">
+                                    <div className="form-group">
+                                        <FontAwesomeIcon icon={faUser} className="login__icon" />
+                                        <input
+                                            autoComplete="off"
+                                            type="text"
+                                            className="login__input"
+                                            placeholder="Tài khoản"
+                                            {...register("username", { required: 'Vui lòng nhập tên tài khoản' })}
+                                        />
+                                    </div>
+                                    {errors.username && <span className="text-danger">{errors.username.message}</span>}
+                                    <div className="form-group">
+                                        <FontAwesomeIcon icon={faKey} className="login__icon" />
+                                        <input
+                                            type="password"
+                                            className="login__input"
+                                            name="password"
+                                            placeholder="Mật khẩu"
+                                            {...register("password", { required: 'Vui lòng nhập mật khẩu' })}
+                                        />
+                                    </div>
+                                    {errors.password && <span className="text-danger">{errors.password.message}</span>}
+                                    <Link className="forgot-password" to="/">Quên mật khẩu?</Link>
+                                    <button type="submit" className="form__btn">Đăng nhập</button>
+                                </div>
 
-                        <p className="form__subtitle">Bạn chưa có tài khoản? <Link to="/register">Đăng ký</Link></p>
-                    </form>
+                                <p className="form__subtitle">Bạn chưa có tài khoản? <Link to="/register">Đăng ký</Link></p>
+                            </form>
+                        </div>
+                        <Modal show={show} onHide={handleClose}>
+                            <Modal.Body className="d-flex justify-content-between">
+                                <div>Tài khoản hoặc mật khẩu không chính xác, vui lòng thử lại</div>
+                                <FontAwesomeIcon icon={faTimes} style={
+                                    {
+                                        margin: "0.2rem",
+                                        alightSelf: "center",
+                                        color: "#000"
+                                    }
+                                }
+                                    onClick={handleClose}
+                                />
+                            </Modal.Body>
+                        </Modal>
+                    </div>
                 </div>
-                <Modal show={show} onHide={handleClose}>
-                    <Modal.Body className="d-flex justify-content-between">
-                        <div>Tài khoản hoặc mật khẩu không chính xác, vui lòng thử lại</div>
-                        <FontAwesomeIcon icon={faTimes} style={
-                            {
-                                margin: "0.2rem",
-                                alightSelf: "center",
-                                color: "#000"
-                            }
-                        }
-                            onClick={handleClose}
-                        />
-                    </Modal.Body>
-                </Modal>
-            </div>
-        </div>
+
+            )}
+        </>
     )
 }
 

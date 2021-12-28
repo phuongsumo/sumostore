@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Routes, Route } from "react-router-dom";
 
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -10,24 +10,47 @@ import {
 } from "./components/index";
 
 function App() {
+  const [load, setLoad] = useState(false)
+
+  if (localStorage.getItem('user') === null || localStorage.getItem('favorites') === null) {
+    localStorage.setItem('user', JSON.stringify({
+      id: '',
+      avatar: '',
+      username: '',
+      password: '',
+      name: '',
+      email: '',
+      phone: '',
+      auth: false
+    }))
+    localStorage.setItem('favorites', JSON.stringify([]))
+    setLoad(true)
+  }
+
   return (
     <div className="App">
-      <Navbar />
-      <Routes>
-        <Route path="/sumostore" element={<Header />} />
-        <Route path="/homepage" element={<HomePage index={'0'} />} />
-        <Route path="/newcar" element={<RenderData type={"newcars"} index={'1'} />} />
-        <Route path="/motorbikes" element={<RenderData type={"motorbikes"} index={'2'} />} />
-        <Route path="/oldcars" element={<RenderData type={"oldcars"} index={'3'} />} />
-        <Route path="/oldmotors" element={<RenderData type={"oldmotors"} index={'4'} />} />
-        <Route path="/addvehicle" element={<AddVehicle index={'5'} />} />
-        <Route path="/login" element={<Login index={'6'} />} />
-        <Route path="/register" element={<Register />} />
-        <Route path="/terms" element={<Terms />} />
-        <Route path="/profile" element={<Profile index={'6'} />} />
-        <Route path="/favorites" element={<Favorites index={'7'} />} />
-      </Routes>
-      <Footer />
+      {(!load &&
+        <>
+          <Navbar />
+          <Routes>
+            <Route path="/sumostore" element={<Header />} />
+            <Route path="/homepage" element={<HomePage index={'0'} />} />
+            <Route path="/newcar" element={<RenderData type={"newcars"} index={'1'} />} />
+            <Route path="/motorbikes" element={<RenderData type={"motorbikes"} index={'2'} />} />
+            <Route path="/oldcars" element={<RenderData type={"oldcars"} index={'3'} />} />
+            <Route path="/oldmotors" element={<RenderData type={"oldmotors"} index={'4'} />} />
+            <Route path="/addvehicle" element={<AddVehicle index={'5'} />} />
+            <Route path="/login" element={<Login index={'6'} />} />
+            <Route path="/register" element={<Register />} />
+            <Route path="/terms" element={<Terms />} />
+            <Route path="/profile" element={<Profile index={'6'} />} />
+            <Route path="/favorites" element={<Favorites index={'7'} />} />
+          </Routes>
+          <Footer />
+        </>)
+        ||
+        <h1>Loading......</h1>
+      }
     </div>
   );
 }

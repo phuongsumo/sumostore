@@ -1,4 +1,4 @@
-import { useContext, useEffect, useState } from "react"
+import { useContext } from "react"
 import { Link } from "react-router-dom"
 import { Table } from "react-bootstrap"
 import { UserContext } from "../UserContext/UserContext"
@@ -10,13 +10,9 @@ import "./Navbar.css"
 import logo from "./myLogo.png"
 
 function Navbar() {
-    const [favoriteList, setFavoriteList] = useState()
 
     const { user } = useContext(UserContext);
     const { favorites } = useContext(FavoritesContext);
-    useEffect(() => {
-        setFavoriteList(favorites)
-    }, [favorites])
 
     return (
         <>
@@ -48,7 +44,7 @@ function Navbar() {
                             <Link className="nav-item" to="/addvehicle">
                                 <li className="nav-link">đăng bán xe</li>
                             </Link>
-                            {user.auth ? (
+                            {user && user.auth ? (
                                 <Link to="/profile" className="nav-item">
                                     <li className="nav-link">{user.name}</li>
                                 </Link>
@@ -56,7 +52,7 @@ function Navbar() {
                                 <li className="nav-link">đăng nhập</li>
                             </Link>
                             }
-                            {user.auth &&
+                            {user && user.auth &&
                                 <>
                                     <Link className="nav-item" to="/favorites">
                                         <li className="nav-link">Yêu thích</li>
@@ -69,10 +65,10 @@ function Navbar() {
                                                 className="nav-icon"
                                             />
                                         </Link>
-                                        {favoriteList && <div className="fav__count">{favoriteList.length}</div>}
+                                        {favorites && <div className="fav__count">{favorites.length}</div>}
                                         <ul className="nav-subnav">
                                             <li className="subnav-item text-center">Danh sách yêu thích</li>
-                                            {(favoriteList && favoriteList.length > 0 &&
+                                            {(favorites && favorites.length > 0 &&
                                                 <Table bordered className="fav-table">
                                                     <thead className="fav-table__head">
                                                         <tr>
@@ -83,7 +79,7 @@ function Navbar() {
                                                         </tr>
                                                     </thead>
                                                     <tbody className="fav-table__body">
-                                                        {favoriteList.map((favorite, index) =>
+                                                        {favorites.map((favorite, index) =>
                                                             <tr key={index} className="subnav-item">
                                                                 <td>{index + 1}</td>
                                                                 <td>{favorite.name}</td>
