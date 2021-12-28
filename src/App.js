@@ -28,7 +28,8 @@ function App() {
   }
 
   const Reload = () => {
-    return window.location.reload()
+    window.location.reload()
+    return <h1>Loading...</h1>
   }
 
   return (
