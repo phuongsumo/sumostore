@@ -97,36 +97,12 @@ const Footer = () => {
                                         className="contact__icon"
                                     />
                                 </a>
-                                <a href="https://www.instagram.com/" className="contact__link">
-                                    <FontAwesomeIcon
-                                        icon={['fab', 'instagram']}
-                                        style={{
-                                            color: "var(--primary-red)"
-                                        }}
-                                        className="contact__icon"
-                                    />
-                                </a>
                                 <a href="https://github.com/" className="contact__link">
                                     <FontAwesomeIcon
                                         icon={['fab', 'github']}
                                         style={{
                                             color: "var(--primary-black)"
                                         }}
-                                        className="contact__icon"
-                                    />
-                                </a>
-                                <a href="https://www.youtube.com/" className="contact__link">
-                                    <FontAwesomeIcon
-                                        icon={['fab', 'youtube']}
-                                        style={{
-                                            color: "var(--primary-red)"
-                                        }}
-                                        className="contact__icon"
-                                    />
-                                </a>
-                                <a href="https://twitter.com/?lang=vi" className="contact__link">
-                                    <FontAwesomeIcon
-                                        icon={['fab', 'twitter']}
                                         className="contact__icon"
                                     />
                                 </a>
@@ -141,7 +117,7 @@ const Footer = () => {
                     </Col>
                 </Row>
             </Container>
-        </div>
+        </div >
     )
 }
 

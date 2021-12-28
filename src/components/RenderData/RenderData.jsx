@@ -79,7 +79,7 @@ const RenderData = ({ type, index }) => {
         const fetchData = () => {
             Axios.get(`${api}/${type}`)
                 .then(response => {
-                    setFilter(response.data)
+                    setFilter(response.data.sort((a, b) => b.id - a.id))
                 })
                 .catch((e) => {
                     alert('Đã xảy ra lỗi, vui lòng tải lại trang')

@@ -50,6 +50,7 @@
 .profile-btn__container {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 .profile__btn {
