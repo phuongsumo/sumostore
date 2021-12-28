@@ -135,7 +135,7 @@ const Profile = ({ index }) => {
                     </Row>
                 </Container>
             ) : (
-                <Navigate to="/login" />
+                <Navigate to="/sumostore/login" />
             )}
         </div>
     )

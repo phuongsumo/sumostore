@@ -19,7 +19,7 @@ const Header = () => {
                         backSpeed={30}
                         loop
                     />
-                    <Link to="/homepage" className="header__btn">Bắt đầu mua hàng</Link>
+                    <Link to="/sumostore/homepage" className="header__btn">Bắt đầu mua hàng</Link>
                 </div>
             </div>
         </div>

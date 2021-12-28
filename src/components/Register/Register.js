@@ -40,7 +40,7 @@ const Register = () => {
             .catch(e => alert('Đăng ký thất bại, vui lòng thử lại'))
 
         if (window.confirm('Bạn đã đăng ký thành công, chuyển đến đăng nhập?')) {
-            navigate("/login")
+            navigate("/sumostore/login")
         } else {
             reset()
         }
@@ -153,7 +153,7 @@ const Register = () => {
                             style={{ marginLeft: "0.5rem", marginBottom: "0" }}
                             htmlFor="exampleCheck1"
                         >
-                            Đồng ý với <Link to="/terms">điều khoản sử dụng</Link>
+                            Đồng ý với <Link to="/sumostore/terms">điều khoản sử dụng</Link>
                         </label> <br />
                         {errors.agree && <span className="text-danger">{errors.agree.message}</span>}
                     </div>

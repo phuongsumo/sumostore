@@ -31,7 +31,7 @@ const HomePage = ({ index }) => {
                     />
                     <Carousel.Caption>
                         <h3 className="slider__title">Xe Hơi</h3>
-                        <p className="slider__description">Bạn muốn mua, bán <Link className="slider__link" to="/oldcars">xe cũ</Link>, <Link className="slider__link" to="/newcar">mới</Link> hãy tới với chúng tôi</p>
+                        <p className="slider__description">Bạn muốn mua, bán <Link className="slider__link" to="/sumostore/oldcars">xe cũ</Link>, <Link className="slider__link" to="/sumostore/newcar">mới</Link> hãy tới với chúng tôi</p>
                     </Carousel.Caption>
                 </Carousel.Item>
                 <Carousel.Item>
@@ -42,7 +42,7 @@ const HomePage = ({ index }) => {
                     />
                     <Carousel.Caption>
                         <h3 className="slider__title">Xe Máy</h3>
-                        <p className="slider__description">Bạn có đam mê với phân khối lớn, mua ngay <Link className="slider__link" to="/motorbikes">tại đây</Link></p>
+                        <p className="slider__description">Bạn có đam mê với phân khối lớn, mua ngay <Link className="slider__link" to="/sumostore/motorbikes">tại đây</Link></p>
                     </Carousel.Caption>
                 </Carousel.Item>
                 <Carousel.Item>
@@ -53,7 +53,7 @@ const HomePage = ({ index }) => {
                     />
                     <Carousel.Caption>
                         <h3 className="slider__title">Xe Cũ</h3>
-                        <p className="slider__description">Bạn là Racing Boy đang cần chiến mã??? <Link className="slider__link" to="/oldmotors">Mua ngay</Link> </p>
+                        <p className="slider__description">Bạn là Racing Boy đang cần chiến mã??? <Link className="slider__link" to="/sumostore/oldmotors">Mua ngay</Link> </p>
                     </Carousel.Caption>
                 </Carousel.Item>
             </Carousel>

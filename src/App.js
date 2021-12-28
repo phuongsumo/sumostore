@@ -39,17 +39,17 @@ function App() {
           <Navbar />
           <Routes>
             <Route path="/sumostore" element={<Header />} />
-            <Route path="/homepage" element={<HomePage index={'0'} />} />
-            <Route path="/newcar" element={<RenderData type={"newcars"} index={'1'} />} />
-            <Route path="/motorbikes" element={<RenderData type={"motorbikes"} index={'2'} />} />
-            <Route path="/oldcars" element={<RenderData type={"oldcars"} index={'3'} />} />
-            <Route path="/oldmotors" element={<RenderData type={"oldmotors"} index={'4'} />} />
-            <Route path="/addvehicle" element={<AddVehicle index={'5'} />} />
-            <Route path="/login" element={<Login index={'6'} />} />
-            <Route path="/register" element={<Register />} />
-            <Route path="/terms" element={<Terms />} />
-            <Route path="/profile" element={<Profile index={'6'} />} />
-            <Route path="/favorites" element={<Favorites index={'7'} />} />
+            <Route path="/sumostore/homepage" element={<HomePage index={'0'} />} />
+            <Route path="/sumostore/newcar" element={<RenderData type={"newcars"} index={'1'} />} />
+            <Route path="/sumostore/motorbikes" element={<RenderData type={"motorbikes"} index={'2'} />} />
+            <Route path="/sumostore/oldcars" element={<RenderData type={"oldcars"} index={'3'} />} />
+            <Route path="/sumostore/oldmotors" element={<RenderData type={"oldmotors"} index={'4'} />} />
+            <Route path="/sumostore/addvehicle" element={<AddVehicle index={'5'} />} />
+            <Route path="/sumostore/login" element={<Login index={'6'} />} />
+            <Route path="/sumostore/register" element={<Register />} />
+            <Route path="/sumostore/terms" element={<Terms />} />
+            <Route path="/sumostore/profile" element={<Profile index={'6'} />} />
+            <Route path="/sumostore/favorites" element={<Favorites index={'7'} />} />
           </Routes>
           <Footer />
         </>)
