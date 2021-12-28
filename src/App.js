@@ -27,6 +27,10 @@ function App() {
     setLoad(true)
   }
 
+  const Reload = () => {
+    return window.location.reload()
+  }
+
   return (
     <div className="App">
       {(!load &&
@@ -49,7 +53,7 @@ function App() {
           <Footer />
         </>)
         ||
-        <h1>Loading......</h1>
+        <Reload />
       }
     </div>
   );
