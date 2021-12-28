@@ -70,23 +70,11 @@ const RenderData = ({ type, index }) => {
         Axios.delete(`${api}/${type}/${id}`)
             .then(response => {
                 alert("Đã xóa mặt hàng")
+                window.location.reload()
             })
             .catch((e) => {
                 alert('Đã xảy ra lỗi, vui lòng tải lại trang')
             })
-
-        // re-render data on api
-        const fetchData = () => {
-            Axios.get(`${api}/${type}`)
-                .then(response => {
-                    setFilter(response.data.sort((a, b) => b.id - a.id))
-                })
-                .catch((e) => {
-                    alert('Đã xảy ra lỗi, vui lòng tải lại trang')
-                })
-        }
-        fetchData();
-        fetchData();
     }
 
     // filter vehicle
@@ -106,7 +94,7 @@ const RenderData = ({ type, index }) => {
         setTimeout(() => {
             setLoad(true)
             setCurrentPage(currentPage + 1)
-        }, 2000);
+        }, 1300);
     }
     const handlePageClickCollapse = () => {
         setCurrentPage(1)

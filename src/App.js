@@ -1,5 +1,6 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Routes, Route } from "react-router-dom";
+import RingLoader from "react-spinners/RingLoader";
 
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
@@ -12,24 +13,32 @@ import {
 function App() {
   const [load, setLoad] = useState(false)
 
-  if (localStorage.getItem('user') === null || localStorage.getItem('favorites') === null) {
-    localStorage.setItem('user', JSON.stringify({
-      id: '',
-      avatar: '',
-      username: '',
-      password: '',
-      name: '',
-      email: '',
-      phone: '',
-      auth: false
-    }))
-    localStorage.setItem('favorites', JSON.stringify([]))
-    setLoad(true)
-  }
+  useEffect(() => {
+    if (localStorage.getItem('user') === null || localStorage.getItem('favorites') === null) {
+      localStorage.setItem('user', JSON.stringify({
+        id: '',
+        avatar: '',
+        username: '',
+        password: '',
+        name: '',
+        email: '',
+        phone: '',
+        auth: false
+      }))
+      localStorage.setItem('favorites', JSON.stringify([]))
+      setLoad(true)
+    }
+  }, [])
+
 
   const Reload = () => {
     window.location.reload()
-    return <h1>Loading...</h1>
+    return (
+      <div className="spinner">
+        <RingLoader color={"#A38D65"} size={70} />
+        <h3>Loading...</h3>
+      </div>
+    )
   }
 
   return (

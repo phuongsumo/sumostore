@@ -17,9 +17,10 @@ const UserProvider = ({ children }) => {
             auth: true
         })
         localStorage.setItem('user', userChange)
+        localStorage.setItem('favorites', JSON.stringify([]))
         userStatus = JSON.parse(localStorage.getItem('user'))
         setUser(userStatus)
-        window.location.reload()
+        // window.location.reload()
     }
 
     const logout = () => {

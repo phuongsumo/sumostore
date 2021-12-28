@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { Modal, Button, Container, Row, Col, Form, FloatingLabel } from 'react-bootstrap'
-import { useForm } from "react-hook-form";
+import { useForm } from "react-hook-form"
 import Axios from 'axios'
 import TypeVehicles from './TypeVehicles'
 
@@ -49,11 +49,12 @@ const DetailFix = ({ show, handleClose, info }) => {
                 // Post data to Api
                 if (type === firstType) {
                     Axios.put(`${api}/${type}/${id}`, data)
-                        .then(() => {
+                        .then((res) => {
                             setImage()
                             alert('Sửa đổi thành công')
                             reset()
                             setShowFix(false)
+                            handleClose()
                             window.location.reload()
                         })
                         .catch(err => alert('Có lỗi xảy ra'))
@@ -61,11 +62,12 @@ const DetailFix = ({ show, handleClose, info }) => {
                     Axios.delete(`${api}/${firstType}/${id}`)
                         .then(res => console.log(res))
                     Axios.post(`${api}/${type}`, data)
-                        .then(() => {
+                        .then((res) => {
                             setImage()
                             alert('Sửa đổi thành công')
                             reset()
                             setShowFix(false)
+                            handleClose()
                             window.location.reload()
                         })
                 }

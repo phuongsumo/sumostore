@@ -3,6 +3,7 @@ import { useContext, useEffect, useState } from 'react'
 import { Navigate } from 'react-router-dom'
 import { UserContext } from "../UserContext/UserContext"
 import { Container, Row, Col } from 'react-bootstrap'
+import HandleProfiles from './HandleProfiles'
 import HandleVehicles from './HandleVehicles'
 import HandleUsers from './HandleUsers'
 import SaleTable from './SaleTable'
@@ -18,6 +19,8 @@ const Profile = ({ index }) => {
 
     const [showUsers, setShowUsers] = useState(false);
     const [showVehicles, setShowVehicles] = useState(false);
+    const [showProfiles, setShowProfiles] = useState(false);
+    const [info, setInfo] = useState([]);
     const [motors, setMotors] = useState([]);
     const [cars, setCars] = useState([]);
     const [oldCars, setOldCars] = useState([]);
@@ -43,12 +46,21 @@ const Profile = ({ index }) => {
             .then(response => setOldMotors(response.data))
         return () => {
             document.querySelector('.nav-link.active').classList.remove('active')
-            setMotors()
-            setCars()
-            setOldCars()
-            setOldMotors()
+            setMotors([])
+            setCars([])
+            setOldCars([])
+            setOldMotors([])
         }
     }, [index, reRender])
+
+    const handleProfiles = (user) => {
+        setInfo(user)
+        setShowProfiles(true)
+    }
+
+    const handleShowProfiles = () => {
+        setShowProfiles(false)
+    }
 
     const handleLogout = () => {
         if (window.confirm('Bạn chắc chắn muốn đăng xuất, danh sách yêu thích sẽ bị xóa!')) {
@@ -98,6 +110,12 @@ const Profile = ({ index }) => {
                             <div className="profile-btn__container">
                                 <button
                                     className="profile__btn"
+                                    onClick={() => handleProfiles(user)}
+                                >
+                                    Sửa thông tin tài khoản
+                                </button>
+                                <button
+                                    className="profile__btn"
                                     onClick={handleLogout}
                                 >
                                     Đăng xuất
@@ -137,6 +155,11 @@ const Profile = ({ index }) => {
             ) : (
                 <Navigate to="/login" />
             )}
+            <HandleProfiles
+                info={info}
+                showProfiles={showProfiles}
+                handleShowProfiles={handleShowProfiles}
+            />
         </div>
     )
 }
