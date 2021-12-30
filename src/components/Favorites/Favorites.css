@@ -10,7 +10,7 @@
 
 @media (min-width: 35.5rem) and (max-width: 61.938rem) {
     .favorites {
-        margin-top: 4.6rem;
+        padding-top: 4.6rem;
     }
     .favorites__box {
         max-height: 21rem!important;

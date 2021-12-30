@@ -15,6 +15,10 @@
   box-sizing: border-box;
 }
 
+html {
+  overflow: auto;
+}
+
 body {
   font-family: 'Roboto Condensed', sans-serif !important;
   overflow-x: hidden;

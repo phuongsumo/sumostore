@@ -4,7 +4,7 @@ import { FavoritesContext } from '../FavoritesContext/FavoritesContext'
 import DetailModal from '../DetailModal/DetailModal'
 import './Favorites.css'
 
-const Favorites = ({ index }) => {
+const Favorites = () => {
     const [show, setShow] = useState(false)
     const [info, setInfo] = useState(false)
     const { favorites, handleDeleteFavorites } = useContext(FavoritesContext);
@@ -14,12 +14,7 @@ const Favorites = ({ index }) => {
             top: 0,
             behavior: 'smooth'
         })
-        const active = document.querySelectorAll('.nav-link')
-        active[index].classList.add('active')
-        return () => {
-            document.querySelector('.nav-link.active').classList.remove('active')
-        }
-    }, [index])
+    }, [])
 
     const handleClose = () => setShow(false);
     const handleShow = (data) => {

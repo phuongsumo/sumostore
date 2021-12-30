@@ -7,13 +7,14 @@
     background: url(./image1.jpg) no-repeat;
     background-position: center;
     background-size: cover;
+    padding: 1.5rem;
 }
 
-@media (min-width: 35.5rem) and (max-width: 51rem) {
+/* @media (min-width: 35.5rem) and (max-width: 51rem) {
     .register {
-        margin-top: 4.6rem;
+        padding-top: 4.6rem;
     }
-}
+} */
 
 .register::before {
     content: "";

@@ -7,12 +7,6 @@
     bottom: 0;
 }
 
-@media (max-width: 47.99875rem) {
-    .header {
-        top: 4.6rem;
-    }
-}
-
 .header__container {
     position: relative;
     background: url(./header-bg-img.jpg) no-repeat;
@@ -60,6 +54,7 @@
 }
 
 .header__btn:hover {
+    font-weight: bold;
     background-color: var(--primary-white);
     color: var(--primary-black);
 }

@@ -4,6 +4,10 @@
         font-size: 1.2rem;
     }
 
+    .nav-item.hov {
+        margin-left: 50%;
+    }
+
     .typed-text span{
         font-size: 1rem;
     }
@@ -12,12 +16,20 @@
         font-size: 0.8rem;
     }
 
+    .slider__item {
+        height: 20rem!important;
+    }
+
     .slider__title {
-        font-size: 1.5rem;
+        font-size: 1.2rem;
     }
 
     .slider__description {
-        font-size: 0.6rem;
+        font-size: 0.6rem!important;
+    }
+
+    .home__content {
+        height: 15rem!important;
     }
 }
 
@@ -28,12 +40,32 @@
         font-size: 1.5rem;
     }
 
+    .nav-item.hov {
+        margin-left: 55%;
+    }
+
     .typed-text span{
         font-size: 1rem;
+    }
+
+    .slider__item {
+        height: 20rem!important;
+    }
+
+    .home__content {
+        height: 18rem!important;
     }
 }
 
 /* Medium devices (tablets, 768px and up) */
 @media (min-width: 48rem) and (max-width: 61.9rem) {
+
+    .nav-item.hov {
+        margin-left: 60%;
+    }
+
+    .slider__item {
+        height: 26rem;
+    }
     
 }

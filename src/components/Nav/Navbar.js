@@ -52,56 +52,51 @@ function Navbar() {
                                 <li className="nav-link">đăng nhập</li>
                             </Link>
                             }
-                            {user && user.auth &&
-                                <>
-                                    <Link className="nav-item" to="/favorites">
-                                        <li className="nav-link">Yêu thích</li>
-                                    </Link>
-                                    <li className="nav-item hide-on-mobile">
-                                        <Link to="/favorites" className="nav-icon__container">
-                                            <FontAwesomeIcon icon={faBookmark} className="nav-icon" />
-                                            <FontAwesomeIcon
-                                                icon={faSortDown}
-                                                className="nav-icon"
-                                            />
-                                        </Link>
-                                        {favorites && <div className="fav__count">{favorites.length}</div>}
-                                        <ul className="nav-subnav">
-                                            <li className="subnav-item text-center">Danh sách yêu thích</li>
-                                            {(favorites && favorites.length > 0 &&
-                                                <Table bordered className="fav-table">
-                                                    <thead className="fav-table__head">
-                                                        <tr>
-                                                            <th>STT</th>
-                                                            <th>Tên</th>
-                                                            <th>Giá</th>
-                                                            <th>Ảnh</th>
-                                                        </tr>
-                                                    </thead>
-                                                    <tbody className="fav-table__body">
-                                                        {favorites.map((favorite, index) =>
-                                                            <tr key={index} className="subnav-item">
-                                                                <td>{index + 1}</td>
-                                                                <td>{favorite.name}</td>
-                                                                <td>{favorite.price}</td>
-                                                                <td>
-                                                                    <img src={favorite.image} alt="fav-img" className="fav__img" />
-                                                                </td>
-                                                            </tr>
-                                                        )}
-                                                    </tbody>
-                                                </Table>)
-                                                ||
-                                                <li className="subnav-item">
-                                                    <p className="fav__null">Hiện không có sản phẩm nào</p>
-                                                </li>
-                                            }
-                                        </ul>
-                                    </li>
-                                </>
-                            }
                         </ul>
                     </div>
+                    {user && user.auth &&
+                        <div className="nav-item hov">
+                            <Link to="/favorites" className="nav-icon__container">
+                                <FontAwesomeIcon icon={faBookmark} className="nav-icon" />
+                                <FontAwesomeIcon
+                                    icon={faSortDown}
+                                    className="nav-icon"
+                                />
+                            </Link>
+                            {favorites && <Link to="/favorites" className="fav__count">{favorites.length}</Link>}
+                            <div className="nav-subnav">
+                                <div className="subnav-item text-center">Danh sách yêu thích</div>
+                                {(favorites && favorites.length > 0 &&
+                                    <Table bordered className="fav-table">
+                                        <thead className="fav-table__head">
+                                            <tr>
+                                                <th>STT</th>
+                                                <th>Tên</th>
+                                                <th>Giá</th>
+                                                <th>Ảnh</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody className="fav-table__body">
+                                            {favorites.map((favorite, index) =>
+                                                <tr key={index} className="subnav-item">
+                                                    <td>{index + 1}</td>
+                                                    <td>{favorite.name}</td>
+                                                    <td>{favorite.price}</td>
+                                                    <td>
+                                                        <img src={favorite.image} alt="fav-img" className="fav__img" />
+                                                    </td>
+                                                </tr>
+                                            )}
+                                        </tbody>
+                                    </Table>)
+                                    ||
+                                    <div className="subnav-item">
+                                        <p className="fav__null">Hiện không có sản phẩm nào</p>
+                                    </div>
+                                }
+                            </div>
+                        </div>
+                    }
                 </div>
             </nav>
 

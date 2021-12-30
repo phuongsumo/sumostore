@@ -1,5 +1,21 @@
+.homepage {
+    min-height: 100vh;
+    padding: 4.6rem 0 1.5rem 0;
+}
+
+.slider__container {
+    margin-top: 1rem;
+}
+
+.slider__item {
+    width: 100%;
+    height: 30rem;
+}
+
 .slider__img {
-    height: 100vh;
+    height: 100%;
+    width: 100%;
+    border-radius: 0.5rem;
     object-fit: cover;
 }
 
@@ -14,11 +30,12 @@
 }
 
 .slider__link {
+    border-radius: 0.2rem;
     text-decoration: none;
     border: 0.0625rem solid var(--primary-brown);
     color: var(--primary-white);
-    background-color: var(--primary-black);
-    padding: 0.0625rem 0.125rem;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 0.0625rem 0.325rem;
 }
 
 .slider__link:hover {
@@ -26,4 +43,73 @@
     color: var(--primary-black);
     text-shadow: initial;
     font-weight: 600;
+}
+
+.home__content {
+    width: 100%;
+    height: 20rem;
+}
+
+.home__sell,
+.home__old-car,
+.home__audi,
+.home__lambor,
+.home__honda,
+.home__ferrari {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: var(--primary-white);
+    text-shadow: 0 0 0.3rem var(--primary-black);
+    width: 100%;
+    height: 100%;
+}
+
+.home__sell::before,
+.home__old-car::before,
+.home__audi::before,
+.home__lambor::before,
+.home__honda::before,
+.home__ferrari::before {
+    border-radius: 0.5rem;
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0.7;
+    z-index: -1;
+}
+
+.home__sell::before {
+    background: url(./img/sell.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.home__old-car::before {
+    background: url(./img/oldCar.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.home__audi::before {
+    background: url(./img/AudiBanner.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.home__lambor::before {
+    background: url(./img/lambor.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.home__honda::before {
+    background: url(./img/Honda.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.home__ferrari::before {
+    background: url(./img/Ferrari.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
 }

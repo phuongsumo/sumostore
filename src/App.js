@@ -58,7 +58,7 @@ function App() {
             <Route path="/register" element={<Register />} />
             <Route path="/terms" element={<Terms />} />
             <Route path="/profile" element={<Profile index={'6'} />} />
-            <Route path="/favorites" element={<Favorites index={'7'} />} />
+            <Route path="/favorites" element={<Favorites />} />
           </Routes>
           <Footer />
         </>)
