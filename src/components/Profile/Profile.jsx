@@ -11,7 +11,7 @@ import SaleTable from './SaleTable'
 import './Profile.css'
 
 const usersApi = "https://61bfeebfb25c3a00173f4f68.mockapi.io/api/v1/account";
-const apiVehicles = "https://61bff171b25c3a00173f4f80.mockapi.io/api/vehicles";
+const apiVehicles = "https://61bff171b25c3a00173f4f80.mockapi.io/api/vehicles_v1";
 
 const Profile = ({ index }) => {
     const { user, logout } = useContext(UserContext);

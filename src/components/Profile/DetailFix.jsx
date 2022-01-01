@@ -4,7 +4,7 @@ import { useForm } from "react-hook-form"
 import Axios from 'axios'
 import TypeVehicles from './TypeVehicles'
 
-const api = 'https://61bff171b25c3a00173f4f80.mockapi.io/api/vehicles';
+const api = 'https://61bff171b25c3a00173f4f80.mockapi.io/api/vehicles_v1';
 const apiImage = 'https://api.cloudinary.com/v1_1/sumoshop/image/upload';
 
 const DetailFix = ({ show, handleClose, info }) => {
