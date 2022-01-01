@@ -12,8 +12,8 @@ import Axios from 'axios';
 import './RenderData.css';
 
 
+const api = 'https://61bff171b25c3a00173f4f80.mockapi.io/api/vehicles_v1'
 const RenderData = ({ type, index }) => {
-    const api = 'https://61bff171b25c3a00173f4f80.mockapi.io/api/vehicles_v1'
     const [vehicles, setVehicles] = useState();
     const [show, setShow] = useState(false);
     const [load, setLoad] = useState(true);

@@ -4,7 +4,7 @@ import { useForm } from "react-hook-form";
 import './Register.css'
 import Axios from 'axios';
 
-const api = 'https://61bfeebfb25c3a00173f4f68.mockapi.io/api/v1/account'
+const api = 'https://61bfeebfb25c3a00173f4f68.mockapi.io/api/users/account'
 
 const Register = () => {
     const { register, handleSubmit, formState: { errors }, reset } = useForm();

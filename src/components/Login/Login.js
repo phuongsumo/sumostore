@@ -9,13 +9,13 @@ import { faTimes, faUser, faKey } from "@fortawesome/free-solid-svg-icons"
 
 import "./Login.css"
 
+const api = "https://61bfeebfb25c3a00173f4f68.mockapi.io/api/users/account";
 const Login = ({ index }) => {
     const { user, login } = useContext(UserContext);
     const [users, setUsers] = useState([]);
     const [show, setShow] = useState(false);
     const navigate = useNavigate();
 
-    const api = "https://61bfeebfb25c3a00173f4f68.mockapi.io/api/v1/account";
 
     useEffect(() => {
         window.scroll({
